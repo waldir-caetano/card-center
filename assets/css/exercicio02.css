@@ -1,0 +1,118 @@
+:root{
+    --animatin-during:3s;
+    --width:100%;
+    --gap:30px;
+    --card-main-width:500px;
+    --card-main-height:450px;
+}
+*{
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main{
+    
+    width: var(--width);
+    height: var(--width);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+}
+.main-header{
+    border: 1px solid black;
+    height: 250px;
+    width: var(--width);
+    background-image: url(../image/image-header.svg);
+    background-size: cover;
+    background-position: center center;
+    animation-name: anima-header;
+    animation-duration: var(--animatin-during);
+ 
+}
+
+.card-main{
+  
+    width: var(--card-main-width);
+    height: 450px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+    background-color: #ffffff;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.679);
+    position: absolute;
+    top: 140px;
+    padding: var(--gap);
+    animation-name: anima-card;
+    animation-duration: var(--animatin-during);
+
+}
+.line01{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    font-size: 40px;
+    gap: 10px;
+}
+.line{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+strong,span{
+    color: #2b1143;
+}
+p{
+    color: #9b9b9b;
+}
+.icon-star{
+    width: 50px;
+    height: var(--width);
+}
+.icons{
+    width: var(--gap);
+    height: 70%;
+}
+@media screen and (max-width:520px){
+    .main-header{
+        background-image: url(../image/background-pattern-mobile.svg);
+        height: 220px;
+    }
+    .card-main{
+        width: 350px;
+        height: var(--card-main-width);
+        display: flex;
+        flex-direction: column;
+        top: 120px;
+        gap: 18px;
+        animation-name: anima-card;
+        animation-duration: 2s;
+    }
+}
+@keyframes anima-header {
+    from{
+        transform: translateY(-1000px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+       
+    }
+}
+@keyframes anima-card {
+    from{
+        transform: translateY(600px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+       
+    }
+}
+
+
